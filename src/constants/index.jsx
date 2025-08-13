@@ -52,31 +52,31 @@ export const statistics = [
 export const products = [
   {
     imgURL: shoe4,
-    name: "Nike Air Jordan-01",
-    price: "$200.20",
+    name: "Sweat Pants - Nike Air",
+    price: "KSH: 2300.00",
   },
   {
     imgURL: shoe5,
-    name: "Nike Air Jordan-10",
-    price: "$210.20",
+    name: "Black Short Dress",
+    price: "KSH: 2100.00",
   },
   {
     imgURL: shoe6,
-    name: "Nike Air Jordan-100",
-    price: "$220.20",
+    name: "Boyz Beach Shirt",
+    price: "KSH: 1800.20",
   },
   {
     imgURL: shoe7,
-    name: "Nike Air Jordan-001",
-    price: "$230.20",
+    name: "Kalid Grey Pants",
+    price: "KSH: 1630.00",
   },
 ];
 
 export const services = [
   {
     imgURL: truckFast,
-    label: "Free shipping",
-    subtext: "Enjoy seamless shopping with our complimentary shipping service.",
+    label: "Free Delivery",
+    subtext: "Enjoy seamless shopping with our complimentary delivery services.",
   },
   {
     imgURL: shieldTick,

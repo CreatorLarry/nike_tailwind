@@ -1,9 +1,13 @@
 import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
-import { statistics } from "../constants";
-import { bigJacket1 } from "../assets/images";
+import { shoes, statistics } from "../constants";
+import { bigShoe1 } from "../assets/images";
+import ShoeCard from "../components/ShoeCard";
+import { useState } from "react";
 
 const Hero = () => {
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+
   return (
     <section
       id="home"
@@ -15,12 +19,13 @@ const Hero = () => {
         </p>
         <h1 className="mt-10 font-palaquin text-8xl max-sm:text-[72px] max-sm:leading-[82] font-bold">
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
-            Our Latest Arrival
+            Our Latest
           </span>
           <br />
-          <span className="text-gray-800 inline-block mt-3">Puffy </span> Jackets
+          <span className="text-gray-800 inline-block mt-3">Puffy </span>{" "}
+          Jackets
         </h1>
-        <p className="font-montserrat text-slate-gray-600 text-lg leading-8 mt-6 mb-14">
+        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14">
           Embrace the chill in style with our latest collection of puffy
           jackets, designed for both warmth and fashion.
         </p>
@@ -30,18 +35,36 @@ const Hero = () => {
           {statistics.map((stat, index) => (
             <div>
               <p className="text-3xl font-palanquin font-bold">{stat.value}</p>
-              <p className="leading-8 font-montserrat text-slate-gray">{stat.label}</p>
+              <p className="leading-8 font-montserrat text-slate-gray">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      <div>
+      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
         <img
-          src={bigJacket1}
-          alt="Hero Image"
-          className="w-full h-auto object-cover rounded-lg shadow-lg"
+          src={bigShoeImg}
+          alt="jacket collection"
+          width={610}
+          height={500}
+          className="object-contain relative z-10"
         />
+
+        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6 z-20">
+          {shoes.map((shoe) => (
+            <div key={shoe}>
+              <ShoeCard
+                imgURL={shoe}
+                changeBigShoeImage={(shoe) => {
+                  setBigShoeImg(shoe);
+                }}
+                bigShoeImg={bigShoeImg}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
