@@ -29,7 +29,7 @@ const Hero = () => {
           Embrace the chill in style with our latest collection of puffy
           jackets, designed for both warmth and fashion.
         </p>
-        <Button lable="Shop now" iconURL={arrowRight} />
+        <Button label="Shop now" iconURL={arrowRight} />
 
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((stat, index) => (

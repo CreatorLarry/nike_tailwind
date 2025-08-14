@@ -26,7 +26,7 @@ const SuperQuality = () => {
           Timeless and sophisticated, this style focuses on well-tailored pieces that never go out of fashion.
         </p>
         <div className="mt-11">
-          <Button lable="View Shop" iconURL={arrowRight} />
+          <Button label="View Shop" iconURL={arrowRight} />
         </div>
         
       </div>
